@@ -1,6 +1,7 @@
 pipeline {
 
-    agent { label 'ensitech' }
+    agent any
+//     agent { label 'ensitech' }
 
     // Le pipeline peut être exécuté sur n'importe quel agent disponible agent any
     stages {
@@ -27,3 +28,5 @@ pipeline {
         }
     }
 }
+
+// java -jar agent.jar -url http://localhost:8080/ -secret 247a41932461eca487280314a6ba73a0b584a4aac66cd5fb37ee4df55bf65d0b -name ensitech -webSocket -workDir "C:\ENSITECH\jenkins-agent"
