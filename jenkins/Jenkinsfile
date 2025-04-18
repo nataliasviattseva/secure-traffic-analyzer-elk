@@ -5,14 +5,15 @@ pipeline {
 
     stages {
 
-//         Première étape : cloner le code source depuis GitHub
-//         stage('Cloner le dépôt') {
-//             steps {
-//                 sh 'git clone --branch main https://github.com/nataliasviattseva/smartcity-elk.git'
-//                 // Spécifie l’URL du dépôt à cloner (à remplacer par ton dépôt)
-// //                 git url: 'https://github.com/nataliasviattseva/smartcity-elk.git', branch: 'main'
-//             }
-//         }
+        // Première étape : cloner le code source depuis GitHub
+        stage('Cloner le dépôt') {
+            steps {
+                sh 'rm -rf smartcity-elk/'
+                sh 'git clone --branch main https://github.com/nataliasviattseva/smartcity-elk.git'
+                // Spécifie l’URL du dépôt à cloner (à remplacer par ton dépôt)
+//                 git url: 'https://github.com/nataliasviattseva/smartcity-elk.git', branch: 'main'
+            }
+        }
 
         stage('Installer Docker Compose') {
             steps {
@@ -38,4 +39,5 @@ pipeline {
     }
 }
 
+// pour lancer agent
 // java -jar agent.jar -url http://localhost:8080/ -secret 247a41932461eca487280314a6ba73a0b584a4aac66cd5fb37ee4df55bf65d0b -name ensitech -webSocket -workDir "C:\ENSITECH\jenkins-agent"
