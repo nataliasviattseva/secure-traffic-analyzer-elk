@@ -7,12 +7,12 @@ pipeline {
     stages {
 
         // Première étape : cloner le code source depuis GitHub
-        stage('Cloner le dépôt') {
-            steps {
-                // Spécifie l’URL du dépôt à cloner (à remplacer par ton dépôt)
-                git url: 'https://github.com/nataliasviattseva/smartcity-elk.git', branch: 'main'
-            }
-        }
+//         stage('Cloner le dépôt') {
+//             steps {
+//                 // Spécifie l’URL du dépôt à cloner (à remplacer par ton dépôt)
+//                 git url: 'https://github.com/nataliasviattseva/smartcity-elk.git', branch: 'main'
+//             }
+//         }
 
         // Deuxième étape : déploiement de la stack ELK
         stage('Déployer Stack ELK') {
