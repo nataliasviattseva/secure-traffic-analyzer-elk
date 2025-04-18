@@ -3,7 +3,6 @@ pipeline {
     agent any
 //     agent { label 'ensitech' }
 
-    // Le pipeline peut être exécuté sur n'importe quel agent disponible agent any
     stages {
 
         // Première étape : cloner le code source depuis GitHub
@@ -17,8 +16,8 @@ pipeline {
         stage('Installer Docker Compose') {
             steps {
                 sh '''
-                    curl -L "https://github.com/docker/compose/releases/download/v2.24.6/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
                     chmod +x /usr/local/bin/docker-compose
+                    curl -L "https://github.com/docker/compose/releases/download/v2.24.6/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
                     docker-compose --version
                 '''
             }
