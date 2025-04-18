@@ -8,8 +8,9 @@ pipeline {
 //         Première étape : cloner le code source depuis GitHub
         stage('Cloner le dépôt') {
             steps {
+                sh 'git clone --branch main https://github.com/nataliasviattseva/smartcity-elk.git'
                 // Spécifie l’URL du dépôt à cloner (à remplacer par ton dépôt)
-                git url: 'https://github.com/nataliasviattseva/smartcity-elk.git', branch: 'main'
+//                 git url: 'https://github.com/nataliasviattseva/smartcity-elk.git', branch: 'main'
             }
         }
 
