@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  jenkins:
+    # Image officielle Jenkins (LTS = Long Term Support)
+    image: jenkins/jenkins:lts
+    ports:
+      # Port d'accès web de Jenkins (http://localhost:8080)
+      - "8080:8080"
+      # Port d’agent Jenkins (connexion à distance des agents)
+      - "50000:50000"
+    volumes:
+      # Volume persistant pour garder les jobs et la config entre les redémarrages
+      - jenkins_home:/var/jenkins_home
+
+volumes:
+  jenkins_home:

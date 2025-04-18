@@ -1,0 +1,27 @@
+pipeline {
+
+    // Le pipeline peut être exécuté sur n'importe quel agent disponible agent any
+    stages {
+
+        // Première étape : cloner le code source depuis GitHub
+        stage('Cloner le dépôt') {
+            steps {
+                // Spécifie l’URL du dépôt à cloner (à remplacer par ton dépôt)
+                git 'https://github.com/<utilisateur>/<repo>.git'
+            }
+        }
+
+        // Deuxième étape : déploiement de la stack ELK
+        stage('Déployer Stack ELK') {
+            steps {
+                // On se place dans le dossier contenant le fichier docker-compose
+                dir('elk') {
+                    // Mise à jour des images à la dernière version disponible
+                    sh 'docker-compose pull'
+                    // Lancement (ou redémarrage) des conteneurs de la stack ELK
+                    sh 'docker-compose up -d'
+                }
+            }
+        }
+    }
+}
