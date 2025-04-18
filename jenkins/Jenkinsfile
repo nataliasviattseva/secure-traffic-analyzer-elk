@@ -13,16 +13,16 @@ pipeline {
 //             }
 //         }
 
-        stage('Installer Docker Compose') {
-            steps {
-                sh '''
-                    curl -L "https://github.com/docker/compose/releases/download/v2.24.6/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-                    chown -R jenkins /usr/local/bin/docker-compose
-                    sudo chmod +x /usr/local/bin/docker-compose
-                    sudo docker-compose --version
-                '''
-            }
-        }
+//         stage('Installer Docker Compose') {
+//             steps {
+//                 sh '''
+//                     curl -L "https://github.com/docker/compose/releases/download/v2.24.6/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+//                     chown -R jenkins /usr/local/bin/docker-compose
+//                     sudo chmod +x /usr/local/bin/docker-compose
+//                     sudo docker-compose --version
+//                 '''
+//             }
+//         }
 
         // Deuxième étape : déploiement de la stack ELK
         stage('Déployer Stack ELK') {
