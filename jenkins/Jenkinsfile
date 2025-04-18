@@ -1,5 +1,7 @@
 pipeline {
 
+    agent { label 'ensitech' }
+
     // Le pipeline peut être exécuté sur n'importe quel agent disponible agent any
     stages {
 
