@@ -10,7 +10,7 @@ pipeline {
         stage('Cloner le dépôt') {
             steps {
                 // Spécifie l’URL du dépôt à cloner (à remplacer par ton dépôt)
-                git 'https://github.com/nataliasviattseva/smartcity-elk.git'
+                git url: 'https://github.com/nataliasviattseva/smartcity-elk.git', branch: 'main'
             }
         }
 
