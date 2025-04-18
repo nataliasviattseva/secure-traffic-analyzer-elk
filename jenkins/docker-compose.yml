@@ -14,6 +14,9 @@ services:
     volumes:
       # Volume persistant pour garder les jobs et la config entre les redémarrages
       - jenkins_home:/var/jenkins_home
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /usr/bin/docker:/usr/bin/docker
+      - /usr/local/bin/docker-compose:/usr/local/bin/docker-compose
 
 volumes:
   jenkins_home:
