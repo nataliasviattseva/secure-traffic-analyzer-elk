@@ -28,11 +28,13 @@ services:
     # Utilisé pour lire, transformer et envoyer les données vers Elasticsearch
     image: docker.elastic.co/logstash/logstash:7.17.0
     volumes:
-#      - ./logstash.conf:/usr/share/logstash/pipeline/logstash.conf
-      - ./pipeline:/usr/share/logstash/pipeline
-      - ../data/pollution_data.csv:/usr/share/logstash/pollution_data.csv
+      # - ./logstash.conf:/usr/share/logstash/pipeline/logstash.conf
+      # - ./pipeline:/usr/share/logstash/pipeline
+      # - ../data/pollution_data.csv:/usr/share/logstash/pollution_data.csv
+      - ./pipeline/logstash.conf:/usr/share/logstash/pipeline/logstash.conf
     ports:
       - "5044:5044"
+      - "5045:5045"  
     depends_on:
       - elasticsearch
     networks:
