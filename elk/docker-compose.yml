@@ -1,6 +1,19 @@
 version: '3.8'
 
 services:
+
+  nginx:
+    image: nginx:latest
+    ports:
+      - "443:443"
+    volumes:
+      - ./nginx/conf.d:/etc/nginx/conf.d
+      - ./nginx/ssl:/etc/nginx/ssl
+    networks:
+      - elk
+    depends_on:
+      - kibana
+
   elasticsearch:
     # Utilise l'image officielle d'Elasticsearch version 7.17.0
     image: docker.elastic.co/elasticsearch/elasticsearch:7.17.0
@@ -10,7 +23,8 @@ services:
       # Désactive la sécurité (authentification, SSL) pour simplifier l'accès en local
       - xpack.security.enabled=false
     ports:
-      - "9200:9200"
+      # - "9200:9200"
+      - "127.0.0.1:9200:9200" # Accessible uniquement en local
     networks:
       - elk
 
