@@ -29,7 +29,9 @@ services:
     image: docker.elastic.co/logstash/logstash:7.17.0
     volumes:
       - ./logstash.conf:/usr/share/logstash/logstash.conf
-      - ../data/network_security_logs.csv:/usr/share/logstash/network_security_logs.csv
+      # - ../data/network_security_logs.csv:/usr/share/logstash/network_security_logs.csv
+      - "C:/ENSITECH/secure-traffic-analyzer-elk/data/network_security_logs.csv:/usr/share/logstash/network_security_logs.csv"
+
     ports:
       - "5044:5044"
       - "5045:5045" 
