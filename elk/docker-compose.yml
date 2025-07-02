@@ -28,11 +28,11 @@ services:
     # Utilisé pour lire, transformer et envoyer les données vers Elasticsearch
     image: docker.elastic.co/logstash/logstash:7.17.0
     volumes:
-      - ./logstash_iot.conf:/usr/share/logstash/logstash.conf
+      - ./logstash.conf:/usr/share/logstash/logstash.conf
       - ../data/network_security_logs.csv:/usr/share/logstash/network_security_logs.csv
     ports:
       - "5044:5044"
-      - "5045:5045"  
+      - "5045:5045" 
     depends_on:
       - elasticsearch
     networks:
