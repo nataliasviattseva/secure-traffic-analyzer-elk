@@ -33,7 +33,7 @@ pipeline {
                     // Mise à jour des images à la dernière version disponible
                     // Lancement (ou redémarrage) des conteneurs de la stack ELK
                     sh '''
-                        cd secure-traffic-analyzer-elk/elk
+                        cd elk
                         docker-compose pull
                         docker-compose up -d
                 '''
