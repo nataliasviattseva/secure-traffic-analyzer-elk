@@ -8,10 +8,10 @@ pipeline {
         // Première étape : cloner le code source depuis GitHub
         stage('Cloner le dépôt') {
             steps {
-                sh 'rm -rf smartcity-elk/'
-                sh 'git clone --branch main https://github.com/nataliasviattseva/smartcity-elk.git'
+                sh 'rm -rf secure-traffic-analyzer-elk/'
+                sh 'git clone --branch main https://github.com/nataliasviattseva/secure-traffic-analyzer-elk.git'
                 // Spécifie l’URL du dépôt à cloner (à remplacer par ton dépôt)
-//                 git url: 'https://github.com/nataliasviattseva/smartcity-elk.git', branch: 'main'
+//                 git url: 'https://github.com/nataliasviattseva/secure-traffic-analyzer-elk.git', branch: 'main'
             }
         }
 
@@ -31,9 +31,9 @@ pipeline {
             steps {
                 // On se place dans le dossier contenant le fichier docker-compose
                     // Mise à jour des images à la dernière version disponible
-                    sh 'docker-compose -f smartcity-elk/elk/docker-compose.yml pull'
+                    sh 'docker-compose -f secure-traffic-analyzer-elk/elk/docker-compose.yml pull'
                     // Lancement (ou redémarrage) des conteneurs de la stack ELK
-                    sh 'docker-compose -f smartcity-elk/elk/docker-compose.yml up -d'
+                    sh 'docker-compose -f secure-traffic-analyzer-elk/elk/docker-compose.yml up -d'
             }
         }
     }

@@ -2,6 +2,7 @@ version: '3.8'
 
 services:
 
+# Service Jenkins pour l'intégration continue
   jenkins:
     user: root
     # Image officielle Jenkins (LTS = Long Term Support)
