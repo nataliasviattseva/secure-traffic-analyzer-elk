@@ -31,9 +31,12 @@ pipeline {
             steps {
                 // On se place dans le dossier contenant le fichier docker-compose
                     // Mise à jour des images à la dernière version disponible
-                    sh 'docker-compose -f elk/docker-compose.yml pull'
                     // Lancement (ou redémarrage) des conteneurs de la stack ELK
-                    sh 'docker-compose -f elk/docker-compose.yml up -d'
+                    sh '''
+                        cd secure-traffic-analyzer-elk/elk
+                        docker-compose pull
+                        docker-compose up -d
+                '''
             }
         }
     }
