@@ -1,5 +1,4 @@
-name: CI-CD ELK SmartCity
-
+name: CI-CD ELK Secure Traffic Analyzer
 on:
   push:
     branches: [ main ]
