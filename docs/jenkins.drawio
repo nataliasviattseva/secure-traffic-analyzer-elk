@@ -1,9 +1,39 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36" version="27.2.0">
   <diagram name="Page-1" id="1Yitd5san6WjEiZ2IKb1">
-    <mxGraphModel>
+    <mxGraphModel dx="1042" dy="562" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="axi98H7FhQk3Ob-n2Foi-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="axi98H7FhQk3Ob-n2Foi-2" target="axi98H7FhQk3Ob-n2Foi-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="axi98H7FhQk3Ob-n2Foi-2" value="Start" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="60" width="60" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="axi98H7FhQk3Ob-n2Foi-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="axi98H7FhQk3Ob-n2Foi-3" target="axi98H7FhQk3Ob-n2Foi-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="axi98H7FhQk3Ob-n2Foi-3" value="Agent&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="170" y="60" width="60" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="axi98H7FhQk3Ob-n2Foi-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="axi98H7FhQk3Ob-n2Foi-5" target="axi98H7FhQk3Ob-n2Foi-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="axi98H7FhQk3Ob-n2Foi-5" value="Installer Docker Compose" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="55" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="axi98H7FhQk3Ob-n2Foi-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="axi98H7FhQk3Ob-n2Foi-7" target="axi98H7FhQk3Ob-n2Foi-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="axi98H7FhQk3Ob-n2Foi-7" value="Déployer Stack ELK" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="413.5" y="55" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="axi98H7FhQk3Ob-n2Foi-9" value="cd elk/&#xa;docker-compose pull&#xa;docker-compose down -v&#xa;docker-compose up -d --remove-orphans" style="text;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="420" y="110" width="170" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="axi98H7FhQk3Ob-n2Foi-10" value="Stack ELK fonctionnelle dans Docker" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="540" y="55" width="80" height="50" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
