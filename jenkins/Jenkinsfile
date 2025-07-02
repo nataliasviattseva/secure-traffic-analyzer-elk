@@ -34,8 +34,6 @@ pipeline {
                     // Lancement (ou redémarrage) des conteneurs de la stack ELK
                     sh '''
                         cd elk
-                        echo "Contenu du dossier pipeline :"
-                        ls -l pipeline
                         docker-compose pull
                         docker-compose up -d --remove-orphans
                     '''
