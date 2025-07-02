@@ -30,7 +30,7 @@ services:
     volumes:
       # - ./logstash.conf:/usr/share/logstash/pipeline/logstash.conf
       # - ./pipeline:/usr/share/logstash/pipeline
-      - ../data/traffic_data.csv:/usr/share/logstash/traffic_data.csv
+      - ../data/network_security_logs.csv:/usr/share/logstash/network_security_logs.csv
       - ./logstash.conf:/usr/share/logstash/pipeline/logstash.conf
     ports:
       - "5044:5044"
